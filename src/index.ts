@@ -1,3 +1,7 @@
-export const a = 's'
+import * as examine from './examine'
+import * as object from './object'
 
-export default 'zhurs'
+export default {
+  ...examine,
+  ...object,
+}

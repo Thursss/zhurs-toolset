@@ -10,7 +10,9 @@
     "lint": "eslint .",
     "prettier": "prettier . -w"
   },
-  "keywords": ["tool"],
+  "keywords": [
+    "tool"
+  ],
   "author": "zhurs",
   "license": "ISC",
   "devDependencies": {
@@ -37,6 +39,7 @@
     "rollup-plugin-replace": "^2.2.0",
     "rollup-plugin-terser": "^7.0.2",
     "rollup-plugin-typescript2": "^0.31.2",
+    "tslib": "^2.5.0",
     "typescript": "^4.6.3"
   }
 }
