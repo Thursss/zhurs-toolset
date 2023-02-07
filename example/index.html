@@ -13,14 +13,24 @@
   <body></body>
   <script src="../dist/dev/iife/index.js"></script>
   <script>
-    const { assertionType, deepAssign } = this['zhurs-toolset']
+    const { assertionType, deepAssign, deepCopy } = this['zhurs-toolset']
 
-    console.log(assertionType(1))
+    console.log('assertionType: ', assertionType(1))
+
+    console.log('deepCopy: ', deepCopy({ a: 1, v: '1' }))
+
     console.log(
+      'deepAssign: ',
       deepAssign(
-        { v: 1, obj: { v: 2, a: 1 } },
+        {
+          v: 1,
+          obj: { v: 2, a: 1, b: 'xx', f: 00, obj: { a: 1 } },
+          arr: [1, 2],
+        },
         { v: 2 },
-        { v: 3, a: 1, obj: { v: 3 } }
+        { v: 1, obj: { v: 3, b: 1, g: 1, obj: { a: 'ff' } } },
+        { ss: 33, arr: 1, obj: {} },
+        { fun: () => {} }
       )
     )
   </script>

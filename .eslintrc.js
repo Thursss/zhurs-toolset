@@ -44,5 +44,6 @@ module.exports = {
     'space-in-parens': 2, // 强制在圆括号内使用一致的空格
     'no-var': 2, // 要求使用 let 或 const 而不是 var,
     '@typescript-eslint/no-var-requires': 0,
+    '@typescript-eslint/ban-types': 1,
   },
 }
