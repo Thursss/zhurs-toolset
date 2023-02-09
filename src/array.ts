@@ -1,4 +1,4 @@
-import { assertionType } from './examine'
+import { isArray } from './examine'
 
 /**
  * 数组扁平化
@@ -9,7 +9,7 @@ import { assertionType } from './examine'
 export function flatten(arr: any[], key = 'key') {
   return [].concat(
     ...arr.map((item) =>
-      item[key] && assertionType(item[key], 'array')
+      item[key] && isArray(item[key])
         ? [].concat(item, ...flatten(item[key], key))
         : item
     )

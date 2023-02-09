@@ -13,7 +13,8 @@
   <body></body>
   <script src="../dist/dev/iife/index.js"></script>
   <script>
-    const { assertionType, deepAssign, deepCopy } = this['zhurs-toolset']
+    const { assertionType, deepAssign, deepCopy, deviceInfo } =
+      this['zhurs-toolset']
 
     console.log('assertionType: ', assertionType(1))
 
@@ -33,5 +34,7 @@
         { fun: () => {} }
       )
     )
+
+    console.log(deviceInfo())
   </script>
 </html>
