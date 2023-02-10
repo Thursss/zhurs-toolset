@@ -31,45 +31,57 @@ export function assertionType(parameter: unknown, type?: string | string[]) {
 }
 
 /**
- * 判断是否是对象
+ * 判断是否是字符串 使用lodah
  * @param {unknown} parameter
  * @returns {boolean}
  */
-export function isObject(parameter: unknown) {
-  return assertionType(parameter, 'object')
-}
+// export function isString(parameter: unknown) {
+//   return assertionType(parameter, 'string')
+// }
 /**
- * 判断是否是数组
+ * 判断是否是对象 使用lodah
  * @param {unknown} parameter
  * @returns {boolean}
  */
-export function isArray(parameter: unknown) {
-  return assertionType(parameter, 'array')
-}
-
+// export function isObject(parameter: unknown) {
+//   return assertionType(parameter, 'object')
+// }
 /**
- * 判断对象或数组是否不为空
- * @param obj
+ * 判断是否是数组 使用lodah
+ * @param {unknown} parameter
  * @returns {boolean}
  */
-export function isNotEmpty(obj) {
-  let isEmptyFlog = false
-  if (assertionType(obj, ['undefined', 'null'])) isEmptyFlog = true
-  if (assertionType(obj, 'object')) isEmptyFlog = JSON.stringify(obj) === '{}'
-  if (assertionType(obj, 'array')) isEmptyFlog = obj.length <= 0
-  return !isEmptyFlog
-}
+// export function isArray(parameter: unknown) {
+//   return assertionType(parameter, 'array')
+// }
 
 /**
- * 判断对象或数组是否为空
- * @param obj
+ * 判断对象或数组是否不为空 使用lodah
+ * @param {object | any[]} obj
  * @returns {boolean}
  */
-export function isEmpty(obj) {
-  return !isNotEmpty(obj)
-}
+// export function isNotEmpty(obj: object | any[]) {
+//   let isEmptyFlog = false
+//   if (assertionType(obj, ['undefined', 'null'])) isEmptyFlog = true
+//   if (assertionType(obj, 'object')) isEmptyFlog = JSON.stringify(obj) === '{}'
+//   if (assertionType(obj, 'array')) isEmptyFlog = (<any[]>obj).length <= 0
+//   return !isEmptyFlog
+// }
 
-export const deviceInfo = function () {
+/**
+ * 判断对象或数组是否为空 使用lodah
+ * @param {object | any[]} obj
+ * @returns {boolean}
+ */
+// export function isEmpty(obj: object | any[]) {
+//   return !isNotEmpty(obj)
+// }
+
+/**
+ * @description: 获取设备类型
+ * @return {*}
+ */
+export function deviceInfo() {
   const ua = navigator.userAgent
   const language = navigator.language.toLowerCase()
 

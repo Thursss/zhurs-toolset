@@ -13,7 +13,7 @@ import json from 'rollup-plugin-json'
 // 环境变量
 const NODE_ENV = process.env.NODE_ENV
 // 入口文件
-const inputDir = path.resolve(__dirname, './src/index.ts')
+const inputDir = path.resolve(__dirname, './lib/index.ts')
 // 输出路径
 const outputDir = { development: './dist/dev/', production: './dist/build/' }[
   NODE_ENV
@@ -65,6 +65,7 @@ const config = {
       format,
       globals: { ...globals },
       name: require('./package.json').name,
+      extend: true,
     })),
     plugins: [...plugins, terser(), cleanup(), filesize()],
     external: [...externals],

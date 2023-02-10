@@ -13,12 +13,10 @@
   <body></body>
   <script src="../dist/dev/iife/index.js"></script>
   <script>
-    const { assertionType, deepAssign, deepCopy, deviceInfo } =
+    const { assertionType, deepAssign, deviceInfo, isString } =
       this['zhurs-toolset']
 
     console.log('assertionType: ', assertionType(1))
-
-    console.log('deepCopy: ', deepCopy({ a: 1, v: '1' }))
 
     console.log(
       'deepAssign: ',

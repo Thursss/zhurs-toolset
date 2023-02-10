@@ -4,6 +4,7 @@
     "target": "es5",
     "module": "es2015",
     "declaration": true,
+    "baseUrl": ".",
     "outDir": "./dist/",
     "strict": false,
     "sourceMap": false,
@@ -13,10 +14,18 @@
     "forceConsistentCasingInFileNames": true,
     "experimentalDecorators": true,
     "suppressImplicitAnyIndexErrors": true,
-    "lib": ["dom", "ESNext"],
+    "lib": [
+      "dom",
+      "ESNext"
+    ],
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": [
+        "lib/*"
+      ]
     }
   },
-  "exclude": ["dist", "node_modules"]
+  "exclude": [
+    "dist",
+    "node_modules"
+  ]
 }
