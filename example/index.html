@@ -13,7 +13,7 @@
   <body></body>
   <script src="../dist/dev/iife/index.js"></script>
   <script>
-    const { assertionType, deepAssign, deviceInfo, isString } =
+    const { assertionType, deepAssign, deviceInfo, isString, timeSlice } =
       this['zhurs-toolset']
 
     console.log('assertionType: ', assertionType(1))
@@ -33,6 +33,8 @@
       )
     )
 
-    console.log(deviceInfo())
+    console.log('deviceInfo', deviceInfo())
+
+    console.log('timeSlice: ', timeSlice())
   </script>
 </html>
